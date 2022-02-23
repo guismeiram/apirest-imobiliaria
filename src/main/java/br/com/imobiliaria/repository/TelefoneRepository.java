@@ -1,4 +1,7 @@
 package br.com.imobiliaria.repository;
 
-public interface TelefoneRepository {
+import br.com.imobiliaria.model.Telefone;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface TelefoneRepository extends JpaRepository<Telefone, Integer > {
 }

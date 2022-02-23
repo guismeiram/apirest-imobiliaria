@@ -1,4 +1,7 @@
 package br.com.imobiliaria.repository;
 
-public interface ImovelRepository {
+import br.com.imobiliaria.model.Imovel;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ImovelRepository extends JpaRepository<Imovel, Integer > {
 }
