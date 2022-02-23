@@ -10,7 +10,7 @@ public class EnderecoDto {
     public String pais;
     public String nImovel;
     public String cep;
-    
+
     public String getRua() {
         return rua;
     }
