@@ -2,7 +2,9 @@
 API imobiliaria de gerenciamento de imoveis, usuarios, endereços.
 
 -API
+
 -Swagger
+
 -Cadastro de imoveis
 
 Para download acesse este link https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html. Você terá que escolher a ferramenta diacordo com a sua maquina.
