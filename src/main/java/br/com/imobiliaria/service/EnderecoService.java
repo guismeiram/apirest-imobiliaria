@@ -39,4 +39,16 @@ public class EnderecoService {
     public Endereco atualiza(Endereco endereco){
         return _enderecoRepository.save(endereco);
     }
+
+    public boolean existsByIdEndereco(int idEndereco){
+        return _enderecoRepository.existsByIdEndereco(idEndereco);
+    }
+
+    public boolean existsByCep(String cep){
+        return _enderecoRepository.existsByCep(cep);
+    }
+
+    public boolean existsByNImovel(String nImovel){
+        return _enderecoRepository.existsByNImovel(nImovel);
+    }
 }
