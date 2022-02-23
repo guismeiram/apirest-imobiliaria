@@ -29,6 +29,17 @@ public class Imovel implements Serializable {
 
     @Column(name = "tempo_de_uso_imovel")
     public int tempo_de_uso_imovel;
+    @Column(name = "status")
+    public Enum Status;
+
+    public Imovel(List<Endereco> endereco, List<Usuario> nomeProprietario) {
+        this.endereco = endereco;
+        this.nomeProprietario = nomeProprietario;
+    }
+
+    public Imovel() {
+
+    }
 
     public int getIdImovel() {
         return idImovel;
@@ -70,21 +81,8 @@ public class Imovel implements Serializable {
         Status = status;
     }
 
-    @Column(name = "status")
-    public Enum Status;
 
-    public Imovel(List<Endereco> endereco, List<Usuario> nomeProprietario) {
-        this.endereco = endereco;
-        this.nomeProprietario = nomeProprietario;
-    }
 
-    public Imovel() {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
 
     public void setId(Long id) {
         this.id = id;
