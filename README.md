@@ -1,6 +1,8 @@
 # Imobiliaria
 API imobiliaria de gerenciamento de imoveis, usuarios, endereços.
 
+Será utilizado neste projeto:
+
 -API
 
 -Swagger
@@ -14,6 +16,8 @@ API imobiliaria de gerenciamento de imoveis, usuarios, endereços.
 -Banco utilizado será o postgres
 
 -Jpql
+
+-Tera upload no Heroku
 
 Uma das ferramentas para testar o projeto é o Java 11, que é encontrado neste link para download acesse este link https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html. Você terá que escolher a ferramenta diacordo com a sua maquina.
 
