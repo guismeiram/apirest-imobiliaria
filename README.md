@@ -21,6 +21,10 @@ A ideia do projeto é treinar habildades aprendias em cursos como alura, digital
 
 -Tera upload no Heroku ou aws
 
+-ModelMap
+
+-Lombok
+
 
 Neste projeto eu utlizei 2 classes por enquanto, mais terá uma evolução durate o crecimento dele.
 
