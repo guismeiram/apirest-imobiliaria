@@ -1,6 +1,6 @@
 package br.com.imobiliaria.enums;
 
-public enum Statusimovel {
+public enum StatusImovel {
     Alugado,
     Venda,
     Comprado, //acabou de ser comprado

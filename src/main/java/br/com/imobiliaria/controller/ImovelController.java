@@ -21,10 +21,5 @@ public class ImovelController {
     }
 
 
-    @PostMapping
-    @Transactional
-    public ResponseEntity<ImovelRespostaDto> salvar(@RequestBody ImovelDto dto){
-        Imovel imovel = imovelService.save(dto.converte());
-        return new ResponseEntity<>(ImovelRespostaDto.transformaEmDto(imovel), HttpStatus.CREATED);
-    }
+
 }
