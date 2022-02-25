@@ -14,3 +14,7 @@ Também é necessario de uma IDE, ou pode ser aberto no vscode. O download do ec
 Outro connhecimento necessario é o de clonar repositorio. Basta executar este comando no prompt de comando: git clone https://github.com/guismeiram/Imobiliaria.
 
 Uma das maneiras de se testra o projeto é utilizando uma ferramenta chamada POSTMAN. Neste link esta disponivel o doenload https://www.postman.com/downloads/
+
+Para execuçãO do projeto via terminal:
+
+mvn spring-boot:run
