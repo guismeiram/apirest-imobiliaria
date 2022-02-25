@@ -1,13 +1,16 @@
 package br.com.imobiliaria.model;
 
 import br.com.imobiliaria.enums.StatusImovel;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Data
@@ -33,14 +36,18 @@ public class Imovel {
     @Enumerated(EnumType.STRING)
     public StatusImovel StatusImovel;
 
+    /*@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "data_de_alocacao")
     private LocalDateTime dataDeAlocacao;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "data_de_saida_imovel")
-    private LocalDateTime dataDeSaidaImovel;
+    private LocalDateTime dataDeSaidaImovel;*/
 
 
-
+    public void load() throws Exception {
+        throw new NullPointerException();
+    }
 
 
 
