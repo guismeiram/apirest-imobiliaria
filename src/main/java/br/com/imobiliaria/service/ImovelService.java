@@ -9,7 +9,6 @@ import br.com.imobiliaria.repository.ImovelRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -22,7 +21,10 @@ public class ImovelService implements IImovelService {
 
     @Override
     public MessageResponseDto createImovel(ImovelDto imovelDto) {
-        return null;
+        Imovel imovelToSave = imovelMapper.toModel(imovelDto);
+
+        Imovel imovelSaved = imovelRepository.save(imovelToSave);
+        return createMessageResponse(imovelSaved.getIdImovel(), "Create imovel ID");
     }
 
     @Override
@@ -31,7 +33,7 @@ public class ImovelService implements IImovelService {
     }
 
     @Override
-    public ImovelDto findById(int id) {
+    public ImovelDto findById(Long id) {
         return null;
     }
 
@@ -43,5 +45,13 @@ public class ImovelService implements IImovelService {
     @Override
     public MessageResponseDto updateById(Long id, ImovelDto personDTO) {
         return null;
+    }
+
+
+    private MessageResponseDto createMessageResponse(Long id, String message) {
+        return MessageResponseDto
+                .builder()
+                .message(message + id)
+                .build();
     }
 }

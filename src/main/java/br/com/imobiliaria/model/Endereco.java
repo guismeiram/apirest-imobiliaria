@@ -6,9 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Table;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
@@ -19,10 +17,10 @@ import java.io.Serializable;
 @javax.persistence.Table(name="TB_ENDERECO")
 public class Endereco{
 
-    private Long id;
 
     @Id
-    public int idEnderco;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long idEnderco;
 
     @Column(name = "numero")
     public String numero;

@@ -8,7 +8,7 @@ import java.util.List;
 public interface IImovelService {
     public MessageResponseDto createImovel(ImovelDto imovelDto);
     public List<MessageResponseDto> listAll();
-    public ImovelDto findById(int id);
+    public ImovelDto findById(Long id);
     public void delete(Long id);
     public MessageResponseDto updateById(Long id, ImovelDto personDTO);
 }

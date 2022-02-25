@@ -18,10 +18,8 @@ import java.util.List;
 @javax.persistence.Table(name="TB_IMOVEL")
 public class Imovel {
 
-    private Long id;
-
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_tb_imovel")
     public long idImovel;
 
