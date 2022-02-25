@@ -4,36 +4,19 @@ import br.com.imobiliaria.model.Imovel;
 import br.com.imobiliaria.repository.ImovelRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.Optional;
 
+@Service
 public class ImovelService {
-    final ImovelRepository _imovelRepository;
+    final ImovelRepository imovelRepository;
 
     public ImovelService(ImovelRepository imovelRepository) {
-        _imovelRepository = imovelRepository;
+        this.imovelRepository = imovelRepository;
     }
 
-    @Transactional
-    public Imovel save(Imovel imovel){
-        return _imovelRepository.save(imovel);
-    }
 
-    @Transactional
-    public void delete(Imovel imovel){
-        _imovelRepository.save(imovel);
-    }
 
-    public Page<Imovel> findAll(Pageable pageable){
-        return _imovelRepository.findAll(pageable);
-    }
-
-    public Optional<Imovel> finById(int idImovel){
-        return _imovelRepository.findById(idImovel);
-    }
-
-    public Imovel atualiza(Imovel imovel){
-        return _imovelRepository.save(imovel);
-    }
 }

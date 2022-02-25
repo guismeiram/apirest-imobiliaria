@@ -1,6 +1,6 @@
-package br.com.imobiliaria.model;
+package br.com.imobiliaria.enums;
 
-public enum Status {
+public enum Statusimovel {
     Alugado,
     Venda,
     Comprado, //acabou de ser comprado

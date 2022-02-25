@@ -8,34 +8,41 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
-@Table(appliesTo = "TB_ENDERECO")
-public class Endereco implements Serializable {
+@javax.persistence.Table(name="TB_ENDERECO")
+public class Endereco{
 
     private Long id;
 
     @Id
-    @Column(name = "id", nullable = false)
     public int idEnderco;
-    @Column(name = "numero", nullable = false)
-    public int numero;
-    @Column(name = "rua", nullable = false)
+    @Column(name = "numero")
+    public String numero;
+    @Column(name = "rua")
     public String rua;
-    @Column(name = "bairro", nullable = false)
+    @Column(name = "bairro")
     public String bairro;
-    @Column(name = "cidade", nullable = false)
+    @Column(name = "cidade")
     public String cidade;
-    @Column(name = "pais", nullable = false)
+    @Column(name = "pais")
     public String pais;
-    @Column(name = "nimovel", nullable = false)
+    @Column(name = "nimovel")
     public String nImovel;
-    @Column(name = "cep", nullable = false)
+    @Column(name = "cep")
     public String cep;
 
-    public int getNumero() {
+    public int getIdEnderco() {
+        return idEnderco;
+    }
+
+    public void setIdEnderco(int idEnderco) {
+        this.idEnderco = idEnderco;
+    }
+
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -87,11 +94,5 @@ public class Endereco implements Serializable {
         this.cep = cep;
     }
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 }

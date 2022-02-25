@@ -1,51 +1,63 @@
 package br.com.imobiliaria.model;
 
-import org.hibernate.annotations.Table;
+import br.com.imobiliaria.enums.Statusimovel;
 
 import javax.persistence.*;
-import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
 
 
 @Entity
-@Table(appliesTo = "TB_IMOVEL")
-public class Imovel implements Serializable {
+@javax.persistence.Table(name="TB_IMOVEL")
+public class Imovel {
 
     private Long id;
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_tb_imovel")
-    public int idImovel;
+    public long idImovel;
     @SuppressWarnings("JpaAttributeTypeInspection")
     @OneToMany( cascade = {CascadeType.PERSIST})
     @JoinColumn(name="idEndereco",  nullable = false)
     private List<Endereco> endereco;
-
-    @SuppressWarnings("JpaAttributeTypeInspection")
-    @OneToMany(cascade = {CascadeType.PERSIST})
-    @JoinColumn(name="idUsuario", nullable = false)
-    private List<Usuario> nomeProprietario;
-
     @Column(name = "tempo_de_uso_imovel")
-    public int tempo_de_uso_imovel;
+    public String tempo_de_uso_imovel;
     @Column(name = "status")
-    public Enum Status;
-
-    public Imovel(List<Endereco> endereco, List<Usuario> nomeProprietario) {
-        this.endereco = endereco;
-        this.nomeProprietario = nomeProprietario;
-    }
+    @Enumerated(EnumType.STRING)
+    public Statusimovel StatusImovel;
+    @Column(name = "data_de_alocacao")
+    private LocalDateTime dataDeAlocacao;
+    @Column(name = "data_de_saida_imovel")
+    private LocalDateTime dataDeSaidaImovel;
 
     public Imovel() {
 
+
     }
 
-    public int getIdImovel() {
+    public Statusimovel getStatusImovel() {
+        return StatusImovel;
+    }
+
+
+    public Imovel(String tempo_de_uso_imovel, LocalDateTime dataDeAlocacao, LocalDateTime dataDeSaidaImovel) {
+        this.tempo_de_uso_imovel = tempo_de_uso_imovel;
+        this.dataDeAlocacao = dataDeAlocacao;
+        this.dataDeSaidaImovel = dataDeSaidaImovel;
+    }
+
+    public void setStatusImovel(Statusimovel statusImovel) {
+        StatusImovel = statusImovel;
+    }
+
+
+
+    public long getIdImovel() {
         return idImovel;
     }
 
-    public void setIdImovel(int idImovel) {
+    public void setIdImovel(long idImovel) {
         this.idImovel = idImovel;
     }
 
@@ -57,36 +69,36 @@ public class Imovel implements Serializable {
         this.endereco = endereco;
     }
 
-    public List<Usuario> getNomeProprietario() {
-        return nomeProprietario;
-    }
-
-    public void setNomeProprietario(List<Usuario> nomeProprietario) {
-        this.nomeProprietario = nomeProprietario;
-    }
-
-    public int getTempo_de_uso_imovel() {
+    public String getTempo_de_uso_imovel() {
         return tempo_de_uso_imovel;
     }
 
-    public void setTempo_de_uso_imovel(int tempo_de_uso_imovel) {
+    public void setTempo_de_uso_imovel(String tempo_de_uso_imovel) {
         this.tempo_de_uso_imovel = tempo_de_uso_imovel;
     }
 
-    public Enum getStatus() {
-        return Status;
+
+
+    public LocalDateTime getDataDeAlocacao() {
+        return dataDeAlocacao;
     }
 
-    public void setStatus(Enum status) {
-        Status = status;
+    public void setDataDeAlocacao(LocalDateTime dataDeAlocacao) {
+        this.dataDeAlocacao = dataDeAlocacao;
+    }
+
+    public LocalDateTime getDataDeSaidaImovel() {
+        return dataDeSaidaImovel;
+    }
+
+    public void setDataDeSaidaImovel(LocalDateTime dataDeSaidaImovel) {
+        this.dataDeSaidaImovel = dataDeSaidaImovel;
     }
 
 
 
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 
 
 }
