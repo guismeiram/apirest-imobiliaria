@@ -11,12 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ImovelMapper {
-    /*ImovelMapper INSTANCE = Mappers.getMapper(ImovelMapper.class);
 
-    @Mapping(target = "birthDate", source = "birthDate", dateFormat = "dd-MM-yyyy")
-    Imovel toModel(ImovelDto imovelDto);
-
-    ImovelDto toDTO(Imovel imovel);*/
 
     @Bean
     public ModelMapper modelMapper(){
