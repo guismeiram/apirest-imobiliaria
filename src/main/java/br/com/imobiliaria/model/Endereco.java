@@ -1,10 +1,10 @@
 package br.com.imobiliaria.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Table;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -15,7 +15,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Entity
 @javax.persistence.Table(name="TB_ENDERECO")
-public class Endereco{
+public class Endereco implements Serializable{
 
 
     @Id
