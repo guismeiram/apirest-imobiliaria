@@ -14,7 +14,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 
-// link :http://localhost:8080/documentation.html
+// link do swagger:http://localhost:8080/documentation.html
 @Schema(name = "Imovel", description = "Example imovel schema")
 @Data
 @Builder
