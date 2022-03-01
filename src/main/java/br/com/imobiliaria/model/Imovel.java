@@ -2,6 +2,7 @@ package br.com.imobiliaria.model;
 
 import br.com.imobiliaria.enums.StatusImovel;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,6 +13,9 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+
+//http://localhost:8080/documentation.html
+@Schema(name = "Imovel", description = "Example imovel schema")
 @Data
 @Builder
 @AllArgsConstructor

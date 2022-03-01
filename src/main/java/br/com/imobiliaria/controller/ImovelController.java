@@ -6,7 +6,7 @@ import br.com.imobiliaria.model.Imovel;
 import br.com.imobiliaria.service.ImovelService;
 
 
-
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +17,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Tag(name = "Imovel", description = "Imovel controller API")
 @RestController
-@RequestMapping("/api/v1/imoveis")
+@RequestMapping("/imoveis")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class ImovelController {
 
