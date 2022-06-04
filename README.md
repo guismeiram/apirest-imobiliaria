@@ -11,7 +11,6 @@ A ideia do projeto é treinar habildades aprendias em cursos como alura, digital
 
 -Cadastro de imoveis
 
--Teste Unitario
 
 -Relacionamento entre tabelas(oneToMany)
 
