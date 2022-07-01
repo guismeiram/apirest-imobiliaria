@@ -11,14 +11,11 @@ A ideia do projeto é treinar habildades aprendias em cursos como alura, digital
 
 -Cadastro de imoveis
 
-
--Relacionamento entre tabelas(oneToMany)
-
 -Banco utilizado será o postgres
 
 -Tera upload no Heroku ou aws
 
--ModelMap
+-ModelMapper
 
 -Lombok
 
